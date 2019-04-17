@@ -10,7 +10,7 @@ import (
 
 var JsonSyntaxError = errors.New("Syntax error")
 
-func Decode(src []byte) ([]byte, error) {
+func Normalize(src []byte) ([]byte, error) {
 	r := bytes.NewReader(src)
 	return parseValue(r)
 }
